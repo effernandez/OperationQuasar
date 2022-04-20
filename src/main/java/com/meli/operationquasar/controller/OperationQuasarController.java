@@ -48,7 +48,7 @@ public class OperationQuasarController implements Serializable {
 	@PostMapping(value = "/topsecret_split/{satellite_name}", consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<Object> topScretSplitPost(@PathVariable("satellite_name") String satelliteName, @RequestBody SatelliteDto satellite) {
 		iOperationQuasarService.topScretSplitPost(satelliteName , satellite);
-		return ResponseEntity.created(null).build();
+		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
 	
 	
