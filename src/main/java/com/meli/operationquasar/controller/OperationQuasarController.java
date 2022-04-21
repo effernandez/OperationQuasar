@@ -58,7 +58,7 @@ public class OperationQuasarController implements Serializable {
 		}
 	}
 
-	@ApiOperation(value = "obtiene la ubicación de la nave y el mensaje que emite", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "obtiene la ubicación de la nave y el mensaje que emite")
 	@GetMapping(value = "/topsecret_split/")
 	public  ResponseEntity<Object> topScretSplitConsul() {
 		
