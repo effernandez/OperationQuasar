@@ -58,19 +58,19 @@ public class OperationQuasarController implements Serializable {
 		}
 	}
 
-//	@ApiOperation(value = "obtiene la ubicación de la nave y el mensaje que emite")
-	@GetMapping(value = "/topsecret_split/")
-	public  String topScretSplitConsul() {
-//		ResponseEntity<Object>
-//		try {
-////			return ResponseEntity.status(HttpStatus.OK).body(iOperationQuasarService.topScretSplitGet());
-//		} catch (Throwable e) {
-//			
-//			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-//		}
-//		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("hola");
+////	@ApiOperation(value = "obtiene la ubicación de la nave y el mensaje que emite")
+//	@GetMapping(value = "/topsecret_split/")
+//	public  String topScretSplitConsul() {
+////		ResponseEntity<Object>
+////		try {
+//////			return ResponseEntity.status(HttpStatus.OK).body(iOperationQuasarService.topScretSplitGet());
+////		} catch (Throwable e) {
+////			
+////			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+////		}
+////		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("hola");
+////	}
+//		return " run";
 //	}
-		return " run";
-	}
 
 }
