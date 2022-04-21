@@ -63,11 +63,12 @@ public class OperationQuasarController implements Serializable {
 	public  ResponseEntity<Object> topScretSplitConsul() {
 		
 		try {
-			return ResponseEntity.status(HttpStatus.OK).body(iOperationQuasarService.topScretSplitGet());
+//			return ResponseEntity.status(HttpStatus.OK).body(iOperationQuasarService.topScretSplitGet());
 		} catch (Throwable e) {
 			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
 		}
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("hola");
 	}
 
 }
