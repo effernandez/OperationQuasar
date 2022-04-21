@@ -15,10 +15,10 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ResponseDTO {
 	
-	@JsonProperty("positionNave")
+	@JsonProperty("position")
 	private PositionNaveDto positionNave;
 	
-	@JsonProperty("messageEmitido")
+	@JsonProperty("message")
 	private String messageEmitido;
 
 }

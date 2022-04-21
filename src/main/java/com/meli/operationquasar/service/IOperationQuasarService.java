@@ -8,5 +8,6 @@ public interface IOperationQuasarService {
 	
 	public ResponseDTO getTopSecret(SatellitesDto satelites);
 	public void topScretSplitPost(String name, SatelliteDto satellite);
+	public ResponseDTO topScretSplitGet() throws Throwable;
 
 }

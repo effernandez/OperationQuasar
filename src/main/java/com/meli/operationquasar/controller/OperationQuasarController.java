@@ -39,23 +39,35 @@ public class OperationQuasarController implements Serializable {
 			return ResponseEntity.status(HttpStatus.OK).body(iOperationQuasarService.getTopSecret(satellites));
 
 		} catch (Exception e) {
-			return ResponseEntity.notFound().build();
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
 		}
 
 	}
+
 	@ApiOperation(value = "obtiene la ubicación de la nave y el mensaje que emite", produces = MediaType.APPLICATION_JSON_VALUE)
 	@PostMapping(value = "/topsecret_split/{satellite_name}", consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public ResponseEntity<Object> topScretSplitPost(@PathVariable("satellite_name") String satelliteName, @RequestBody SatelliteDto satellite) {
-		iOperationQuasarService.topScretSplitPost(satelliteName , satellite);
-		return ResponseEntity.status(HttpStatus.CREATED).build();
+	public ResponseEntity<Object> topScretSplitPost(@PathVariable("satellite_name") String satelliteName,
+			@RequestBody SatelliteDto satellite) {
+		try {
+			iOperationQuasarService.topScretSplitPost(satelliteName, satellite);
+			return ResponseEntity.status(HttpStatus.CREATED).build();
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+
+		}
 	}
-	
-	
+
 	@ApiOperation(value = "obtiene la ubicación de la nave y el mensaje que emite", produces = MediaType.APPLICATION_JSON_VALUE)
-	@GetMapping(value = "/topsecret_split/", consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public void topScretSplitConsul() {
+	@GetMapping(value = "/topsecret_split/")
+	public  ResponseEntity<Object> topScretSplitConsul() {
 		
+		try {
+			return ResponseEntity.status(HttpStatus.OK).body(iOperationQuasarService.topScretSplitGet());
+		} catch (Throwable e) {
+			
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+		}
 	}
 
 }

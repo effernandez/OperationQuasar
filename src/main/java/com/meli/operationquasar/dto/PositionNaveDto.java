@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 @Builder
 public class PositionNaveDto {
 	
-	@JsonProperty("ejeX")
+	@JsonProperty("X")
 	private Double ejeX;
 	
-	@JsonProperty("ejeY")
+	@JsonProperty("Y")
 	private Double ejeY;
 
 }
