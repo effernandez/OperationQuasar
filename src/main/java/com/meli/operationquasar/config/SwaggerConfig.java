@@ -35,7 +35,7 @@ public class SwaggerConfig {
 				"Api desafio operation fuego quasar Meli",
 				"Spring boot API OperationFuegoQuasar",
 				"1.0.0",
-				"http://codmind.com/terms",
+				" ",
 				new Contact("Erick Fernandez", " ", "erickfrnandez150594@gmail.com"),
 				"Meli",
 				"LICENSE URL",
